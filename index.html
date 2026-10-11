@@ -1,13 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="theme-color" content="#f4f9f8">
-    <meta name="description"
-          content="Göz sağlığı, göz muayenesi ve göz hastalıkları hakkında bilgi ve iletişim.">
+    <meta name="description" content="Göz sağlığı, göz muayenesi ve göz hastalıkları hakkında bilgi ve iletişim.">
 
     <title>Dr. Tekin Aydın | Göz Hastalıkları Uzmanı</title>
 
@@ -26,10 +25,8 @@
                 </span>
             </a>
 
-            <button class="menu-toggle" id="menuToggle"
-                    aria-label="Menüyü aç"
-                    aria-expanded="false"
-                    aria-controls="mainNav">
+            <button class="menu-toggle" id="menuToggle" aria-label="Menüyü aç" aria-expanded="false"
+                aria-controls="mainNav">
                 ☰
             </button>
 
@@ -63,14 +60,12 @@
                     </p>
 
                     <div class="hero-actions">
-                        <a class="button button-primary"
-                           href="#iletisim">
+                        <a class="button button-primary" href="#iletisim">
                             Randevu için iletişim
                             <span aria-hidden="true">→</span>
                         </a>
 
-                        <a class="button button-secondary"
-                           href="#hizmetler">
+                        <a class="button button-secondary" href="#hizmetler">
                             Hizmetleri incele
                         </a>
                     </div>
@@ -82,10 +77,8 @@
                 </div>
 
                 <div class="hero-visual">
-                    <img
-                        src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=85"
-                        alt="Modern bir sağlık kliniğinde muayene ortamı"
-                        fetchpriority="high">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=85"
+                        alt="Modern bir sağlık kliniğinde muayene ortamı" fetchpriority="high">
 
                     <div class="visual-card">
                         <span class="visual-icon">◎</span>
@@ -320,5 +313,78 @@
             tedavinin yerine geçmez.
         </div>
     </footer>
+
+    <!-- Göz Sağlığı Chatbot -->
+    <div class="chatbot-widget">
+        <button class="chatbot-launcher" id="chatbotLauncher" type="button" aria-label="Göz sağlığı asistanını aç"
+            aria-expanded="false" aria-controls="chatbotPanel">
+            <span aria-hidden="true">💬</span>
+            <span class="chatbot-launcher-label">Göz Sağlığı Asistanı</span>
+        </button>
+
+        <section class="chatbot-panel" id="chatbotPanel" aria-label="Göz sağlığı sohbet penceresi" aria-hidden="true"
+            hidden>
+
+            <header class="chatbot-header">
+                <div class="chatbot-avatar" aria-hidden="true">◉</div>
+
+                <div class="chatbot-heading">
+                    <strong>Göz Sağlığı Asistanı</strong>
+                    <span>Ön değerlendirme ve yönlendirme</span>
+                </div>
+
+                <button type="button" class="chatbot-close" id="chatbotClose" aria-label="Sohbeti kapat">✕</button>
+            </header>
+
+            <div class="chatbot-notice">
+                Bu asistan teşhis koymaz ve tedavi önermez.
+                Acil belirtilerde tıbbi yardım alın.
+            </div>
+
+            <div class="chatbot-messages" id="chatbotMessages" role="log" aria-live="polite" aria-relevant="additions">
+
+                <div class="chat-message bot-message">
+                    Merhaba! Gözünüzle ilgili yaşadığınız sorunu
+                    kısaca anlatabilirsiniz. Size uygun sağlık
+                    hizmetine yönlendirme konusunda yardımcı olacağım.
+                </div>
+
+                <div class="chat-message bot-message">
+                    Önce önemli bir soru: Şu anda ani görme kaybı,
+                    şiddetli göz ağrısı veya göze kimyasal madde
+                    teması gibi acil bir durum var mı?
+                </div>
+
+                <div class="chat-quick-actions">
+                    <button type="button" data-message="Acil bir belirtim var">
+                        Evet, acil bir durum var
+                    </button>
+                    <button type="button" data-message="Acil bir belirtim yok">
+                        Hayır, yok
+                    </button>
+                </div>
+            </div>
+
+            <form class="chatbot-form" id="chatbotForm">
+                <label class="visually-hidden" for="chatbotInput">
+                    Göz şikâyetinizi yazın
+                </label>
+
+                <textarea id="chatbotInput" rows="2" maxlength="1000"
+                    placeholder="Gözünüzle ilgili şikâyetinizi yazın..." required></textarea>
+
+                <button type="submit" aria-label="Mesajı gönder">
+                    Gönder ↑
+                </button>
+            </form>
+
+            <footer class="chatbot-footer">
+                Lütfen ad, kimlik numarası veya diğer kişisel
+                bilgilerinizi yazmayın.
+            </footer>
+        </section>
+    </div>
+
 </body>
+
 </html>
