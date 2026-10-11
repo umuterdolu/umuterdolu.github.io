@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Kişisel web sitem ve projelerim.">
+    <title>Benim Web Sitem</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#anasayfa" class="logo">WebSitem<span>.</span></a>
+
+        <nav>
+            <a href="#anasayfa">Ana Sayfa</a>
+            <a href="#hakkimda">Hakkımda</a>
+            <a href="#projeler">Projeler</a>
+            <a href="#iletisim">İletişim</a>
+        </nav>
+
+        <button id="themeButton" class="theme-button" aria-label="Temayı değiştir">
+            ☀️
+        </button>
+    </header>
+
+    <main>
+        <section id="anasayfa" class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">MERHABA, DÜNYA!</p>
+
+                <h1>Benim dijital<br>
+                    <span>dünyama hoş geldin.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Burası projelerimi, fikirlerimi ve çalışmalarımı
+                    paylaştığım kişisel web sitem.
+                </p>
+
+                <a href="#projeler" class="button">
+                    Projelerimi keşfet →
+                </a>
+            </div>
+
+            <div class="hero-art" aria-hidden="true">
+                <div class="art-circle">{"</>"}</div>
+                <div class="art-caption">HTML · CSS · JS</div>
+            </div>
+        </section>
+
+        <section id="hakkimda" class="section">
+            <p class="eyebrow">KISACA BEN</p>
+            <h2>Hakkımda</h2>
+            <p class="section-description">
+                Web geliştirme ve teknolojiyle ilgileniyorum.
+                Bu siteyi GitHub Pages kullanarak yayınlıyorum.
+                Sen de bu metni kendine göre değiştirebilirsin.
+            </p>
+        </section>
+
+        <section id="projeler" class="section projects-section">
+            <p class="eyebrow">ÇALIŞMALARIM</p>
+            <h2>Örnek Projeler</h2>
+
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-icon">🌐</div>
+                    <h3>Kişisel Web Sitesi</h3>
+                    <p>HTML ve CSS ile hazırlanmış bir web sayfası.</p>
+                    <span class="tag">HTML · CSS</span>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-icon">⚡</div>
+                    <h3>Etkileşimli Uygulama</h3>
+                    <p>JavaScript ile kullanıcı etkileşimleri.</p>
+                    <span class="tag">JavaScript</span>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-icon">🚀</div>
+                    <h3>Yeni Fikirler</h3>
+                    <p>Geliştirmeyi planladığım yeni projeler.</p>
+                    <span class="tag">Yakında</span>
+                </article>
+            </div>
+        </section>
+
+        <section id="iletisim" class="section contact-section">
+            <p class="eyebrow">BANA ULAŞ</p>
+            <h2>Birlikte bir şeyler üretelim.</h2>
+            <p>Projelerim hakkında daha fazla bilgi edinmek için GitHub profilimi ziyaret edebilirsin.</p>
+            <a class="button" href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                GitHub'ı ziyaret et ↗
+            </a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> WebSitem. Tüm hakları saklıdır.</p>
+        <a href="#anasayfa">Yukarı çık ↑</a>
+    </footer>
+
+</body>
+
+</html>
