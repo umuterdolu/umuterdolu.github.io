@@ -1,112 +1,324 @@
+
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Kişisel web sitem ve projelerim.">
-    <title>Benim Web Sitem</title>
+    <meta name="theme-color" content="#f4f9f8">
+    <meta name="description"
+          content="Göz sağlığı, göz muayenesi ve göz hastalıkları hakkında bilgi ve iletişim.">
+
+    <title>Dr. Tekin Aydın | Göz Hastalıkları Uzmanı</title>
 
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a class="brand" href="#anasayfa" aria-label="Ana sayfa">
+                <span class="brand-icon">◉</span>
+                <span>
+                    <strong>Dr. Tekin Aydın</strong>
+                    <small>Göz Hastalıkları Uzmanı</small>
+                </span>
+            </a>
 
-    <header class="header">
-        <a href="#anasayfa" class="logo">WebSitem<span>.</span></a>
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Menüyü aç"
+                    aria-expanded="false"
+                    aria-controls="mainNav">
+                ☰
+            </button>
 
-        <nav>
-            <a href="#anasayfa">Ana Sayfa</a>
-            <a href="#hakkimda">Hakkımda</a>
-            <a href="#projeler">Projeler</a>
-            <a href="#iletisim">İletişim</a>
-        </nav>
-
-        <button id="themeButton" class="theme-button" aria-label="Temayı değiştir">
-            ☀️
-        </button>
+            <nav class="nav-links" id="mainNav">
+                <a href="#anasayfa">Ana Sayfa</a>
+                <a href="#hakkimda">Hakkımda</a>
+                <a href="#hizmetler">Hizmetler</a>
+                <a href="#sss">Sık Sorulan Sorular</a>
+                <a href="#iletisim" class="nav-cta">İletişim</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="anasayfa" class="hero">
-            <div class="hero-content">
-                <p class="eyebrow">MERHABA, DÜNYA!</p>
+        <section class="hero" id="anasayfa">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="eyebrow">
+                        GÖZ SAĞLIĞINIZ İÇİN
+                    </span>
 
-                <h1>Benim dijital<br>
-                    <span>dünyama hoş geldin.</span>
-                </h1>
+                    <h1>
+                        Dünyaya daha
+                        <span>net bakın.</span>
+                    </h1>
 
-                <p class="hero-description">
-                    Burası projelerimi, fikirlerimi ve çalışmalarımı
-                    paylaştığım kişisel web sitem.
-                </p>
+                    <p>
+                        Göz sağlığınızın korunması ve görme
+                        şikâyetlerinizin değerlendirilmesi için
+                        bilgilendirici, özenli ve kişiye özel bir yaklaşım.
+                    </p>
 
-                <a href="#projeler" class="button">
-                    Projelerimi keşfet →
+                    <div class="hero-actions">
+                        <a class="button button-primary"
+                           href="#iletisim">
+                            Randevu için iletişim
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                        <a class="button button-secondary"
+                           href="#hizmetler">
+                            Hizmetleri incele
+                        </a>
+                    </div>
+
+                    <div class="hero-note">
+                        <span class="status-dot"></span>
+                        Göz sağlığı hakkında doğru bilgilendirme
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <img
+                        src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=85"
+                        alt="Modern bir sağlık kliniğinde muayene ortamı"
+                        fetchpriority="high">
+
+                    <div class="visual-card">
+                        <span class="visual-icon">◎</span>
+                        <div>
+                            <strong>Göz sağlığı</strong>
+                            <p>Özenli değerlendirme ve takip</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="intro section" id="hakkimda">
+            <div class="container intro-grid">
+                <div>
+                    <span class="eyebrow">DOKTORUNUZU TANIYIN</span>
+                    <h2>Sağlıklı bir görüş için doğru bilgi.</h2>
+                </div>
+
+                <div class="intro-text">
+                    <p>
+                        Merhaba, ben Dr. Tekin Aydın. Göz Hastalıkları
+                        alanındaki çalışmalarım ve mesleki yaklaşımım
+                        hakkında bu bölümden bilgi alabilirsiniz.
+                    </p>
+
+                    <p>
+                        Eğitim geçmişim, mesleki deneyimim ve çalışma
+                        alanlarım hakkında doğrulanmış bilgileri burada
+                        paylaşacağım.
+                    </p>
+
+                    <a class="text-link" href="#iletisim">
+                        İletişim bilgilerini görüntüle →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="services section" id="hizmetler">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">GÖZ SAĞLIĞI</span>
+                    <h2>İlgi alanları ve hizmetler</h2>
+                    <p>
+                        Muayene ve değerlendirme kapsamındaki alanları
+                        aşağıdan inceleyebilirsiniz.
+                    </p>
+                </div>
+
+                <div class="service-grid">
+                    <article class="service-card">
+                        <div class="service-icon">◉</div>
+                        <h3>Genel Göz Muayenesi</h3>
+                        <p>
+                            Görme durumu ve göz sağlığının
+                            değerlendirilmesine yönelik muayene.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">⌕</div>
+                        <h3>Görme Kusurları</h3>
+                        <p>
+                            Miyopi, hipermetropi ve astigmatizma
+                            gibi kırma kusurlarının değerlendirilmesi.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">✧</div>
+                        <h3>Göz Hastalıkları</h3>
+                        <p>
+                            Gözle ilgili şikâyetlerin değerlendirilmesi
+                            ve uygun takip sürecinin planlanması.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">◷</div>
+                        <h3>Göz Sağlığının Takibi</h3>
+                        <p>
+                            İhtiyaca göre kontrol muayeneleri
+                            ve takip süreçleri hakkında bilgilendirme.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="appointment section">
+            <div class="container appointment-inner">
+                <div>
+                    <span class="eyebrow">İLETİŞİME GEÇİN</span>
+                    <h2>Göz sağlığınızla ilgili sorularınız mı var?</h2>
+                    <p>
+                        Randevu koşulları ve muayene hakkında bilgi
+                        almak için klinikle iletişime geçebilirsiniz.
+                    </p>
+                </div>
+
+                <a href="#iletisim" class="button button-light">
+                    İletişim bilgileri →
                 </a>
             </div>
+        </section>
 
-            <div class="hero-art" aria-hidden="true">
-                <div class="art-circle">{"</>"}</div>
-                <div class="art-caption">HTML · CSS · JS</div>
+        <section class="faq section" id="sss">
+            <div class="container faq-container">
+                <div class="section-heading">
+                    <span class="eyebrow">MERAK EDİLENLER</span>
+                    <h2>Sık sorulan sorular</h2>
+                </div>
+
+                <details>
+                    <summary>Nasıl randevu alabilirim?</summary>
+                    <p>
+                        Randevu için bu sayfadaki telefon veya e-posta
+                        bilgilerini kullanarak kliniğe ulaşabilirsiniz.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Muayeneye gelirken ne yapmalıyım?</summary>
+                    <p>
+                        Varsa önceki muayene kayıtlarınızı, gözlük
+                        reçetenizi ve kullandığınız ilaçların bilgilerini
+                        yanınızda bulundurmanız yararlı olabilir.
+                        Size özel hazırlık gerekip gerekmediğini
+                        klinikten öğrenebilirsiniz.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Web sitesi üzerinden teşhis konulabilir mi?</summary>
+                    <p>
+                        Hayır. Bu web sitesi genel bilgilendirme ve
+                        iletişim amaçlıdır. Tanı ve tedavi için uygun
+                        bir sağlık değerlendirmesi gerekir.
+                    </p>
+                </details>
             </div>
         </section>
 
-        <section id="hakkimda" class="section">
-            <p class="eyebrow">KISACA BEN</p>
-            <h2>Hakkımda</h2>
-            <p class="section-description">
-                Web geliştirme ve teknolojiyle ilgileniyorum.
-                Bu siteyi GitHub Pages kullanarak yayınlıyorum.
-                Sen de bu metni kendine göre değiştirebilirsin.
-            </p>
-        </section>
+        <section class="contact section" id="iletisim">
+            <div class="container contact-grid">
+                <div>
+                    <span class="eyebrow">BİZE ULAŞIN</span>
+                    <h2>İletişim ve çalışma bilgileri</h2>
+                    <p class="contact-description">
+                        Randevu ve diğer sorularınız için
+                        aşağıdaki iletişim bilgilerini kullanabilirsiniz.
+                    </p>
 
-        <section id="projeler" class="section projects-section">
-            <p class="eyebrow">ÇALIŞMALARIM</p>
-            <h2>Örnek Projeler</h2>
+                    <div class="contact-item">
+                        <span class="contact-symbol">☎</span>
+                        <div>
+                            <strong>Telefon</strong>
+                            <p>
+                                <a href="tel:+900000000000">
+                                    +90 (000) 000 00 00
+                                </a>
+                            </p>
+                        </div>
+                    </div>
 
-            <div class="project-grid">
-                <article class="project-card">
-                    <div class="project-icon">🌐</div>
-                    <h3>Kişisel Web Sitesi</h3>
-                    <p>HTML ve CSS ile hazırlanmış bir web sayfası.</p>
-                    <span class="tag">HTML · CSS</span>
-                </article>
+                    <div class="contact-item">
+                        <span class="contact-symbol">✉</span>
+                        <div>
+                            <strong>E-posta</strong>
+                            <p>
+                                <a href="mailto:info@example.com">
+                                    info@example.com
+                                </a>
+                            </p>
+                        </div>
+                    </div>
 
-                <article class="project-card">
-                    <div class="project-icon">⚡</div>
-                    <h3>Etkileşimli Uygulama</h3>
-                    <p>JavaScript ile kullanıcı etkileşimleri.</p>
-                    <span class="tag">JavaScript</span>
-                </article>
+                    <div class="contact-item">
+                        <span class="contact-symbol">⌖</span>
+                        <div>
+                            <strong>Klinik adresi</strong>
+                            <p>[Klinik adresini buraya yazın]</p>
+                        </div>
+                    </div>
+                </div>
 
-                <article class="project-card">
-                    <div class="project-icon">🚀</div>
-                    <h3>Yeni Fikirler</h3>
-                    <p>Geliştirmeyi planladığım yeni projeler.</p>
-                    <span class="tag">Yakında</span>
-                </article>
+                <aside class="contact-panel">
+                    <h3>Çalışma saatleri</h3>
+
+                    <div class="hours-row">
+                        <span>Pazartesi – Cuma</span>
+                        <strong>[Saatleri girin]</strong>
+                    </div>
+
+                    <div class="hours-row">
+                        <span>Cumartesi</span>
+                        <strong>[Saatleri girin]</strong>
+                    </div>
+
+                    <div class="hours-row">
+                        <span>Pazar</span>
+                        <strong>[Bilgi girin]</strong>
+                    </div>
+
+                    <p class="hours-note">
+                        Güncel çalışma saatleri ve randevu durumu
+                        için lütfen klinikle iletişime geçin.
+                    </p>
+                </aside>
             </div>
-        </section>
-
-        <section id="iletisim" class="section contact-section">
-            <p class="eyebrow">BANA ULAŞ</p>
-            <h2>Birlikte bir şeyler üretelim.</h2>
-            <p>Projelerim hakkında daha fazla bilgi edinmek için GitHub profilimi ziyaret edebilirsin.</p>
-            <a class="button" href="https://github.com/" target="_blank" rel="noopener noreferrer">
-                GitHub'ı ziyaret et ↗
-            </a>
         </section>
     </main>
 
     <footer class="footer">
-        <p>© <span id="year"></span> WebSitem. Tüm hakları saklıdır.</p>
-        <a href="#anasayfa">Yukarı çık ↑</a>
+        <div class="container footer-inner">
+            <a class="brand footer-brand" href="#anasayfa">
+                <span class="brand-icon">◉</span>
+                <span>Dr. Tekin Aydın</span>
+            </a>
+
+            <p>
+                © <span id="currentYear"></span>
+                Tüm hakları saklıdır.
+            </p>
+
+            <a href="#anasayfa">Yukarı çık ↑</a>
+        </div>
+
+        <div class="container disclaimer">
+            Bu site bilgilendirme amaçlıdır; tıbbi tanı veya
+            tedavinin yerine geçmez.
+        </div>
     </footer>
-
 </body>
-
 </html>

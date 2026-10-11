@@ -1,23 +1,44 @@
 "use strict";
 
-// Açık ve koyu tema arasında geçiş
-const themeButton = document.getElementById("themeButton");
+// HTML öğelerini seç
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
+const currentYear = document.getElementById("currentYear");
 
-themeButton.addEventListener("click", function () {
-    const isLight = document.body.classList.toggle("light-theme");
+// Güncel yılı otomatik göster
+if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+}
 
-    themeButton.textContent = isLight ? "🌙" : "☀️";
+// Mobil menüyü aç ve kapat
+if (menuToggle && mainNav) {
+    menuToggle.addEventListener("click", () => {
+        const isOpen = mainNav.classList.toggle("open");
 
-    themeButton.setAttribute(
-        "aria-label",
-        isLight ? "Koyu temaya geç" : "Açık temaya geç"
-    );
-});
+        menuToggle.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        );
 
-// Güncel yılı otomatik yazdır
-const yearElement = document.getElementById("year");
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Menüyü kapat" : "Menüyü aç"
+        );
 
-yearElement.textContent = new Date().getFullYear();
+        menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
 
-// Konsola bilgi yazdır
-console.log("Web sitesi başarıyla yüklendi!");
+    // Menü bağlantısına tıklanınca menüyü kapat
+    mainNav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            mainNav.classList.remove("open");
+
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Menüyü aç");
+            menuToggle.textContent = "☰";
+        });
+    });
+}
+
+// Sayfa yüklendiğinde konsola bilgi yaz
+console.log("Göz doktoru web sitesi hazır.");
