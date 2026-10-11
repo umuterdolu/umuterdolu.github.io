@@ -857,7 +857,6 @@ img {
     font-size: 0.87rem;
     line-height: 1.65;
     overflow-wrap: anywhere;
-    white-space: pre-wrap;
 }
 
 .bot-message {
